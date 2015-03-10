@@ -234,12 +234,11 @@ CREATE TABLE `route_points` (
   CONSTRAINT `route_point_station` FOREIGN KEY (`station`) REFERENCES `stations` (`station_id`) ON DELETE SET NULL ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8$$
 
-
 delimiter $$
 
 CREATE TABLE `routes` (
   `route_id` bigint(20) unsigned NOT NULL,
-  `num_code` int(3) unsigned DEFAULT NULL,
+  `num_code` varchar(10) DEFAULT NULL,
   `ticket_price` decimal(8,2) DEFAULT NULL,
   PRIMARY KEY (`route_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8$$

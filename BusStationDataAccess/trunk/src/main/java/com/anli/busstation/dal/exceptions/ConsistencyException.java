@@ -1,20 +1,14 @@
 package com.anli.busstation.dal.exceptions;
 
+import com.anli.busstation.dal.interfaces.entities.BSEntity;
+import java.util.Collection;
+
 public class ConsistencyException extends RuntimeException {
 
-    public ConsistencyException() {
-        super();
-    }
+    protected Collection<BSEntity> inconsistentEntities;
 
-    public ConsistencyException(Throwable cause) {
+    public ConsistencyException(Collection<BSEntity> inconsistentEntities, Throwable cause) {
         super(cause);
-    }
-
-    public ConsistencyException(String message) {
-        super(message);
-    }
-
-    public ConsistencyException(String message, Throwable cause) {
-        super(message, cause);
+        this.inconsistentEntities = inconsistentEntities;
     }
 }

@@ -11,4 +11,8 @@ public class ConsistencyException extends RuntimeException {
         super(cause);
         this.inconsistentEntities = inconsistentEntities;
     }
+
+    public Collection<BSEntity> getEntities() {
+        return inconsistentEntities;
+    }
 }

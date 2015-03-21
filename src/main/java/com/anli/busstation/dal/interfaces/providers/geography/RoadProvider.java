@@ -12,37 +12,37 @@ public interface RoadProvider extends BSEntityProvider<Road> {
 
     List<Road> findByAStation(Station aStation);
 
-    List<Road> findByAnyAStation(Collection<Station> aStationList);
+    List<Road> findByAnyAStation(Collection<Station> aStations);
 
     List<Road> findByZStation(Station zStation);
 
-    List<Road> findByAnyZStation(Collection<Station> zStationList);
+    List<Road> findByAnyZStation(Collection<Station> zStations);
 
     List<Road> findByStation(Station station);
 
-    List<Road> findByAnyStation(Collection<Station> stationList);
+    List<Road> findByAnyStation(Collection<Station> stations);
 
     List<Road> findByLengthRange(Integer lengthLeft, boolean strictLeft,
             Integer lengthRight, boolean strictRight);
 
-    List<Road> findByRidePriceRange(BigDecimal rPriceLeft, boolean strictLeft,
-            BigDecimal rPriceRight, boolean strictRight);
+    List<Road> findByRidePriceRange(BigDecimal ridePriceLeft, boolean strictLeft,
+            BigDecimal ridePriceRight, boolean strictRight);
 
     List<BigInteger> collectIdsByAStation(Station aStation);
 
-    List<BigInteger> collectIdsByAnyAStation(Collection<Station> aStationList);
+    List<BigInteger> collectIdsByAnyAStation(Collection<Station> aStations);
 
     List<BigInteger> collectIdsByZStation(Station zStation);
 
-    List<BigInteger> collectIdsByAnyZStation(Collection<Station> zStationList);
+    List<BigInteger> collectIdsByAnyZStation(Collection<Station> zStations);
 
     List<BigInteger> collectIdsByStation(Station station);
 
-    List<BigInteger> collectIdsByAnyStation(Collection<Station> stationList);
+    List<BigInteger> collectIdsByAnyStation(Collection<Station> stations);
 
     List<BigInteger> collectIdsByLengthRange(Integer lengthLeft, boolean strictLeft,
             Integer lengthRight, boolean strictRight);
 
-    List<BigInteger> collectIdsByRidePriceRange(BigDecimal rPriceLeft, boolean strictLeft,
-            BigDecimal rPriceRight, boolean strictRight);
+    List<BigInteger> collectIdsByRidePriceRange(BigDecimal ridePriceLeft, boolean strictLeft,
+            BigDecimal ridePriceRight, boolean strictRight);
 }

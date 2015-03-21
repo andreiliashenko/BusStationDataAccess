@@ -12,13 +12,13 @@ import org.joda.time.DateTime;
 
 public interface TicketProvider extends BSEntityProvider<Ticket> {
 
-    List<Ticket> findByDeparturePoint(RidePoint point);
+    List<Ticket> findByDeparturePoint(RidePoint departurePoint);
 
-    List<Ticket> findByAnyDeparturePoint(Collection<RidePoint> pointList);
+    List<Ticket> findByAnyDeparturePoint(Collection<RidePoint> departurePoints);
 
-    List<Ticket> findByArrivalPoint(RidePoint point);
+    List<Ticket> findByArrivalPoint(RidePoint arrivalPoint);
 
-    List<Ticket> findByAnyArrivalPoint(Collection<RidePoint> pointList);
+    List<Ticket> findByAnyArrivalPoint(Collection<RidePoint> arrivalPoints);
 
     List<Ticket> findBySeat(Integer seat);
 
@@ -27,27 +27,27 @@ public interface TicketProvider extends BSEntityProvider<Ticket> {
 
     List<Ticket> findBySalesman(Salesman salesman);
 
-    List<Ticket> findByAnySalesman(Collection<Salesman> salesmenList);
+    List<Ticket> findByAnySalesman(Collection<Salesman> salesmen);
 
-    List<Ticket> findBySaleDateRange(DateTime dateLeft, boolean strictLeft,
-            DateTime dateRight, boolean strictRight);
+    List<Ticket> findBySaleDateRange(DateTime saleDateLeft, boolean strictLeft,
+            DateTime saleDateRight, boolean strictRight);
 
-    List<Ticket> findByCustomerName(String custName);
+    List<Ticket> findByCustomerName(String customerName);
 
-    List<Ticket> findByCustomerNameRegexp(String custNameRegexp);
+    List<Ticket> findByCustomerNameRegexp(String customerNameRegexp);
 
     List<Ticket> findByPriceRange(BigDecimal priceLeft, boolean strictLeft,
             BigDecimal priceRight, boolean strictRight);
 
     List<Ticket> findBySold(boolean sold);
 
-    List<BigInteger> collectIdsByDeparturePoint(RidePoint point);
+    List<BigInteger> collectIdsByDeparturePoint(RidePoint departurePoint);
 
-    List<BigInteger> collectIdsByAnyDeparturePoint(Collection<RidePoint> pointList);
+    List<BigInteger> collectIdsByAnyDeparturePoint(Collection<RidePoint> departurePoints);
 
-    List<BigInteger> collectIdsByArrivalPoint(RidePoint point);
+    List<BigInteger> collectIdsByArrivalPoint(RidePoint arrivalPoint);
 
-    List<BigInteger> collectIdsByAnyArrivalPoint(Collection<RidePoint> pointList);
+    List<BigInteger> collectIdsByAnyArrivalPoint(Collection<RidePoint> arrivalPoints);
 
     List<BigInteger> collectIdsBySeat(Integer seat);
 
@@ -56,14 +56,14 @@ public interface TicketProvider extends BSEntityProvider<Ticket> {
 
     List<BigInteger> collectIdsBySalesman(Salesman salesman);
 
-    List<BigInteger> collectIdsByAnySalesman(Collection<Salesman> salesmenList);
+    List<BigInteger> collectIdsByAnySalesman(Collection<Salesman> salesmen);
 
-    List<BigInteger> collectIdsBySaleDateRange(DateTime dateLeft, boolean strictLeft,
-            DateTime dateRight, boolean strictRight);
+    List<BigInteger> collectIdsBySaleDateRange(DateTime saleDateLeft, boolean strictLeft,
+            DateTime saleDateRight, boolean strictRight);
 
-    List<BigInteger> collectIdsByCustomerName(String custName);
+    List<BigInteger> collectIdsByCustomerName(String customerName);
 
-    List<BigInteger> collectIdsByCustomerNameRegexp(String custNameRegexp);
+    List<BigInteger> collectIdsByCustomerNameRegexp(String customerNameRegexp);
 
     List<BigInteger> collectIdsByPriceRange(BigDecimal priceLeft, boolean strictLeft,
             BigDecimal priceRight, boolean strictRight);

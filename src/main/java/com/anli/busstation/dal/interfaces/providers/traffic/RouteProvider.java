@@ -17,31 +17,31 @@ public interface RouteProvider extends BSEntityProvider<Route> {
 
     List<Route> findByNumCode(String numCode);
 
-    List<Route> findByAnyNumCode(Collection<String> numCodeList);
+    List<Route> findByAnyNumCode(Collection<String> numCodes);
 
-    List<Route> findByTicketPriceRange(BigDecimal priceLeft, boolean strictLeft,
-            BigDecimal priceRight, boolean strictRight);
+    List<Route> findByTicketPriceRange(BigDecimal ticketPriceLeft, boolean strictLeft,
+            BigDecimal ticketPriceRight, boolean strictRight);
 
     List<Route> findByRoutePoint(RoutePoint routePoint);
 
-    List<Route> findByAnyRoutePoint(Collection<RoutePoint> routePointList);
+    List<Route> findByAnyRoutePoint(Collection<RoutePoint> routePoints);
 
     List<Route> findByRide(Ride ride);
 
-    List<Route> findByAnyRide(Collection<Ride> rideList);
+    List<Route> findByAnyRide(Collection<Ride> rides);
 
     List<BigInteger> collectIdsByNumCode(String numCode);
 
-    List<BigInteger> collectIdsByAnyNumCode(Collection<String> numCodeList);
+    List<BigInteger> collectIdsByAnyNumCode(Collection<String> numCodes);
 
-    List<BigInteger> collectIdsByTicketPriceRange(BigDecimal priceLeft, boolean strictLeft,
-            BigDecimal priceRight, boolean strictRight);
+    List<BigInteger> collectIdsByTicketPriceRange(BigDecimal ticketPriceLeft, boolean strictLeft,
+            BigDecimal ticketPriceRight, boolean strictRight);
 
     List<BigInteger> collectIdsByRoutePoint(RoutePoint routePoint);
 
-    List<BigInteger> collectIdsByAnyRoutePoint(Collection<RoutePoint> routePointList);
+    List<BigInteger> collectIdsByAnyRoutePoint(Collection<RoutePoint> routePoints);
 
     List<BigInteger> collectIdsByRide(Ride ride);
 
-    List<BigInteger> collectIdsByAnyRide(Collection<Ride> rideList);
+    List<BigInteger> collectIdsByAnyRide(Collection<Ride> rides);
 }

@@ -10,14 +10,14 @@ public interface GasLabelProvider extends BSEntityProvider<GasLabel> {
 
     List<GasLabel> findByName(String name);
 
-    List<GasLabel> findByNameRegexp(String regexpName);
+    List<GasLabel> findByNameRegexp(String nameRegexp);
 
     List<GasLabel> findByPriceRange(BigDecimal priceLeft, boolean leftStrict,
             BigDecimal priceRight, boolean rightStrict);
 
     List<BigInteger> collectIdsByName(String name);
 
-    List<BigInteger> collectIdsByNameRegexp(String regexpName);
+    List<BigInteger> collectIdsByNameRegexp(String nameRegexp);
 
     List<BigInteger> collectIdsByPriceRange(BigDecimal priceLeft, boolean leftStrict,
             BigDecimal priceRight, boolean rightStrict);

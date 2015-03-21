@@ -20,33 +20,33 @@ public interface RideProvider extends BSEntityProvider<Ride> {
 
     List<Ride> findByBus(Bus bus);
 
-    List<Ride> findByAnyBus(Collection<Bus> busList);
+    List<Ride> findByAnyBus(Collection<Bus> buses);
 
     List<Ride> findByRidePoint(RidePoint ridePoint);
 
-    List<Ride> findByAnyRidePoint(Collection<RidePoint> ridePointList);
+    List<Ride> findByAnyRidePoint(Collection<RidePoint> ridePoints);
 
     List<Ride> findByRideRoad(RideRoad rideRoad);
 
-    List<Ride> findByAnyRideRoad(Collection<RideRoad> rideRoadList);
+    List<Ride> findByAnyRideRoad(Collection<RideRoad> rideRoads);
 
     List<Ride> findByTicket(Ticket ticket);
 
-    List<Ride> findByAnyTicket(Collection<Ticket> ticketList);
+    List<Ride> findByAnyTicket(Collection<Ticket> tickets);
 
     List<BigInteger> collectIdsByBus(Bus bus);
 
-    List<BigInteger> collectIdsByAnyBus(Collection<Bus> busList);
+    List<BigInteger> collectIdsByAnyBus(Collection<Bus> buses);
 
     List<BigInteger> collectIdsByRidePoint(RidePoint ridePoint);
 
-    List<BigInteger> collectIdsByAnyRidePoint(Collection<RidePoint> ridePointList);
+    List<BigInteger> collectIdsByAnyRidePoint(Collection<RidePoint> ridePoints);
 
     List<BigInteger> collectIdsByRideRoad(RideRoad rideRoad);
 
-    List<BigInteger> collectIdsByAnyRideRoad(Collection<RideRoad> rideRoadList);
+    List<BigInteger> collectIdsByAnyRideRoad(Collection<RideRoad> rideRoads);
 
     List<BigInteger> collectIdsByTicket(Ticket ticket);
 
-    List<BigInteger> collectIdsByAnyTicket(Collection<Ticket> ticketList);
+    List<BigInteger> collectIdsByAnyTicket(Collection<Ticket> tickets);
 }

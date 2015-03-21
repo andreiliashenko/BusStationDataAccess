@@ -12,17 +12,17 @@ public interface RideRoadProvider extends BSEntityProvider<RideRoad> {
 
     List<RideRoad> findByRoad(Road road);
 
-    List<RideRoad> findByAnyRoad(Collection<Road> roadList);
+    List<RideRoad> findByAnyRoad(Collection<Road> roads);
 
     List<RideRoad> findByDriver(Driver driver);
 
-    List<RideRoad> findByAnyDriver(Collection<Driver> driverList);
+    List<RideRoad> findByAnyDriver(Collection<Driver> drivers);
 
     List<BigInteger> collectIdsByRoad(Road road);
 
-    List<BigInteger> collectIdsByAnyRoad(Collection<Road> roadList);
+    List<BigInteger> collectIdsByAnyRoad(Collection<Road> roads);
 
     List<BigInteger> collectIdsByDriver(Driver driver);
 
-    List<BigInteger> collectIdsByAnyDriver(Collection<Driver> driverList);
+    List<BigInteger> collectIdsByAnyDriver(Collection<Driver> drivers);
 }

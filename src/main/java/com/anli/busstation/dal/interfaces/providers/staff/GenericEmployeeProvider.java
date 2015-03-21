@@ -16,8 +16,8 @@ public interface GenericEmployeeProvider<I extends Employee> extends BSEntityPro
     List<I> findBySalaryRange(BigDecimal salaryLeft, boolean leftStrict,
             BigDecimal salaryRight, boolean rightStrict);
 
-    List<I> findByHiringDateRange(DateTime hdLeft, boolean strictLeft,
-            DateTime hdRight, boolean strictRight);
+    List<I> findByHiringDateRange(DateTime hiringDateLeft, boolean strictLeft,
+            DateTime hiringDateRight, boolean strictRight);
 
     List<BigInteger> collectIdsByName(String name);
 
@@ -26,6 +26,6 @@ public interface GenericEmployeeProvider<I extends Employee> extends BSEntityPro
     List<BigInteger> collectIdsBySalaryRange(BigDecimal salaryLeft, boolean leftStrict,
             BigDecimal salaryRight, boolean rightStrict);
 
-    List<BigInteger> collectIdsByHiringDateRange(DateTime hdLeft, boolean strictLeft,
-            DateTime hdRight, boolean strictRight);
+    List<BigInteger> collectIdsByHiringDateRange(DateTime hiringDateLeft, boolean strictLeft,
+            DateTime hiringDateRight, boolean strictRight);
 }

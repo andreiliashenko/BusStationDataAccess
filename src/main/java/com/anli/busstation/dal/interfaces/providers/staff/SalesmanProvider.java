@@ -6,9 +6,9 @@ import java.util.List;
 
 public interface SalesmanProvider extends GenericEmployeeProvider<Salesman> {
 
-    List<Salesman> findByTotalSalesRange(Integer leftSales, boolean strictLeft,
-            Integer rightSales, boolean strictRight);
+    List<Salesman> findByTotalSalesRange(Integer totalSalesLeft, boolean strictLeft,
+            Integer totalSalesRight, boolean strictRight);
 
-    List<BigInteger> collectIdsByTotalSalesRange(Integer leftSales, boolean strictLeft,
-            Integer rightSales, boolean strictRight);
+    List<BigInteger> collectIdsByTotalSalesRange(Integer totalSalesLeft, boolean strictLeft,
+            Integer totalSalesRight, boolean strictRight);
 }

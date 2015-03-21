@@ -7,17 +7,17 @@ import java.util.List;
 
 public interface TechnicalStateProvider extends BSEntityProvider<TechnicalState> {
 
-    List<TechnicalState> findByDescriptionRegexp(String descrRegexp);
+    List<TechnicalState> findByDescriptionRegexp(String descriptionRegexp);
 
-    List<TechnicalState> findByDifficultyLevel(Integer diffLevel);
+    List<TechnicalState> findByDifficultyLevel(Integer difficultyLevel);
 
-    List<TechnicalState> findByDifficultyLevelRange(Integer dLLeft, boolean strictLeft,
-            Integer dLRight, boolean strictRight);
+    List<TechnicalState> findByDifficultyLevelRange(Integer difficultyLevelLeft, boolean strictLeft,
+            Integer difficultyLevelRight, boolean strictRight);
 
-    List<BigInteger> collectIdsByDescriptionRegexp(String descrRegexp);
+    List<BigInteger> collectIdsByDescriptionRegexp(String descriptionRegexp);
 
-    List<BigInteger> collectIdsByDifficultyLevel(Integer diffLevel);
+    List<BigInteger> collectIdsByDifficultyLevel(Integer difficultyLevel);
 
-    List<BigInteger> collectIdsByDifficultyLevelRange(Integer dLLeft, boolean strictLeft,
-            Integer dLRight, boolean strictRight);
+    List<BigInteger> collectIdsByDifficultyLevelRange(Integer difficultyLevelLeft, boolean strictLeft,
+            Integer difficultyLevelRight, boolean strictRight);
 }

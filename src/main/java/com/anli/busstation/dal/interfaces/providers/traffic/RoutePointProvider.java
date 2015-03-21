@@ -11,9 +11,9 @@ public interface RoutePointProvider extends BSEntityProvider<RoutePoint> {
 
     List<RoutePoint> findByStation(Station station);
 
-    List<RoutePoint> findByAnyStation(Collection<Station> stationList);
+    List<RoutePoint> findByAnyStation(Collection<Station> stations);
 
     List<BigInteger> collectIdsByStation(Station station);
 
-    List<BigInteger> collectIdsByAnyStation(Collection<Station> stationList);
+    List<BigInteger> collectIdsByAnyStation(Collection<Station> stations);
 }

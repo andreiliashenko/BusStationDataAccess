@@ -9,21 +9,21 @@ public interface DriverSkillProvider extends BSEntityProvider<DriverSkill> {
 
     List<DriverSkill> findByName(String name);
 
-    List<DriverSkill> findByNameRegexp(String regexpName);
+    List<DriverSkill> findByNameRegexp(String nameRegexp);
 
-    List<DriverSkill> findByMaxRideLengthRange(Integer mRLLeft, boolean strictLeft,
-            Integer mRLRight, boolean strictRight);
+    List<DriverSkill> findByMaxRideLengthRange(Integer maxRideLengthLeft, boolean strictLeft,
+            Integer maxRideLengthRight, boolean strictRight);
 
-    List<DriverSkill> findByMaxPassengersRange(Integer maxPLeft, boolean strictLeft,
-            Integer maxPRight, boolean strictRight);
+    List<DriverSkill> findByMaxPassengersRange(Integer maxPassengersLeft, boolean strictLeft,
+            Integer maxPassengersRight, boolean strictRight);
 
     List<BigInteger> collectIdsByName(String name);
 
-    List<BigInteger> collectIdsByNameRegexp(String regexpName);
+    List<BigInteger> collectIdsByNameRegexp(String nameRegexp);
 
-    List<BigInteger> collectIdsByMaxRideLengthRange(Integer mRLLeft, boolean strictLeft,
-            Integer mRLRight, boolean strictRight);
+    List<BigInteger> collectIdsByMaxRideLengthRange(Integer maxRideLengthLeft, boolean strictLeft,
+            Integer maxRideLengthRight, boolean strictRight);
 
-    List<BigInteger> collectIdsByMaxPassengersRange(Integer maxPLeft, boolean strictLeft,
-            Integer maxPRight, boolean strictRight);
+    List<BigInteger> collectIdsByMaxPassengersRange(Integer maxPassengersLeft, boolean strictLeft,
+            Integer maxPassengersRight, boolean strictRight);
 }

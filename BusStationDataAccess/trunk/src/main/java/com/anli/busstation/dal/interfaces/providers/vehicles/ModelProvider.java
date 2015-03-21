@@ -14,33 +14,33 @@ public interface ModelProvider extends BSEntityProvider<Model> {
 
     List<Model> findByNameRegexp(String nameRegexp);
 
-    List<Model> findBySeatsNumberRange(Integer seatsLeft, boolean strictLeft,
-            Integer seatsRight, boolean strictRight);
+    List<Model> findBySeatsNumberRange(Integer seatsNumberLeft, boolean strictLeft,
+            Integer seatsNumberRight, boolean strictRight);
 
-    List<Model> findByTankVolumeRange(Integer tvLeft, boolean strictLeft,
-            Integer tvRight, boolean strictRight);
+    List<Model> findByTankVolumeRange(Integer tankVolumeLeft, boolean strictLeft,
+            Integer tankVolumeRight, boolean strictRight);
 
-    List<Model> findByGasLabel(GasLabel label);
+    List<Model> findByGasLabel(GasLabel gasLabel);
 
-    List<Model> findByAnyGasLabel(Collection<GasLabel> labelList);
+    List<Model> findByAnyGasLabel(Collection<GasLabel> gasLabels);
 
-    List<Model> findByGasRateRange(BigDecimal rateLeft, boolean strictLeft,
-            BigDecimal rateRight, boolean strictRight);
+    List<Model> findByGasRateRange(BigDecimal gasRateLeft, boolean strictLeft,
+            BigDecimal gasRateRight, boolean strictRight);
 
     List<BigInteger> collectIdsByName(String name);
 
     List<BigInteger> collectIdsByNameRegexp(String nameRegexp);
 
-    List<BigInteger> collectIdsBySeatsNumberRange(Integer seatsLeft, boolean strictLeft,
-            Integer seatsRight, boolean strictRight);
+    List<BigInteger> collectIdsBySeatsNumberRange(Integer seatsNumberLeft, boolean strictLeft,
+            Integer seatsNumberRight, boolean strictRight);
 
-    List<BigInteger> collectIdsByGasLabel(GasLabel label);
+    List<BigInteger> collectIdsByGasLabel(GasLabel gasLabel);
 
-    List<BigInteger> collectIdsByAnyGasLabel(Collection<GasLabel> labelList);
+    List<BigInteger> collectIdsByAnyGasLabel(Collection<GasLabel> gasLabels);
 
-    List<BigInteger> collectIdsByGasRateRange(BigDecimal rateLeft, boolean strictLeft,
-            BigDecimal rateRight, boolean strictRight);
+    List<BigInteger> collectIdsByGasRateRange(BigDecimal gasRateLeft, boolean strictLeft,
+            BigDecimal gasRateRight, boolean strictRight);
 
-    List<BigInteger> collectIdsByTankVolumeRange(Integer tvLeft, boolean strictLeft,
-            Integer tvRight, boolean strictRight);
+    List<BigInteger> collectIdsByTankVolumeRange(Integer tankVolumeLeft, boolean strictLeft,
+            Integer tankVolumeRight, boolean strictRight);
 }

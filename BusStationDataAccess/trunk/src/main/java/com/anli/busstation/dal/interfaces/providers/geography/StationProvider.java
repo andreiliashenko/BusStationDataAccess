@@ -19,35 +19,35 @@ public interface StationProvider extends BSEntityProvider<Station> {
 
     List<Station> findByNameRegexp(String regexpName);
 
-    List<Station> findByLatitudeRange(BigDecimal leftLat, boolean strictLeft,
-            BigDecimal rightLat, boolean strictRight);
+    List<Station> findByLatitudeRange(BigDecimal latitudeLeft, boolean strictLeft,
+            BigDecimal latitudeRight, boolean strictRight);
 
-    List<Station> findByLongitudeRange(BigDecimal leftLon, boolean strictLeft,
-            BigDecimal rightLon, boolean strictRight);
+    List<Station> findByLongitudeRange(BigDecimal longitudeLeft, boolean strictLeft,
+            BigDecimal longitudeRight, boolean strictRight);
 
     List<Station> findByEmployee(Employee employee);
 
-    List<Station> findByAnyEmployee(Collection<Employee> employeeList);
+    List<Station> findByAnyEmployee(Collection<Employee> employees);
 
     List<Station> findByBus(Bus bus);
 
-    List<Station> findByAnyBus(Collection<Bus> busList);
+    List<Station> findByAnyBus(Collection<Bus> buses);
 
     List<BigInteger> collectIdsByName(String name);
 
     List<BigInteger> collectIdsByNameRegexp(String regexpName);
 
-    List<BigInteger> collectIdsByLatitudeRange(BigDecimal leftLat, boolean strictLeft,
-            BigDecimal rightLat, boolean strictRight);
+    List<BigInteger> collectIdsByLatitudeRange(BigDecimal latitudeLeft, boolean strictLeft,
+            BigDecimal latitudeRight, boolean strictRight);
 
-    List<BigInteger> collectIdsByLongitudeRange(BigDecimal leftLon, boolean strictLeft,
-            BigDecimal rightLon, boolean strictRight);
+    List<BigInteger> collectIdsByLongitudeRange(BigDecimal longitudeLeft, boolean strictLeft,
+            BigDecimal longitudeRight, boolean strictRight);
 
     List<BigInteger> collectIdsByEmployee(Employee employee);
 
-    List<BigInteger> collectIdsByAnyEmployee(Collection<Employee> employeeList);
+    List<BigInteger> collectIdsByAnyEmployee(Collection<Employee> employees);
 
     List<BigInteger> collectIdsByBus(Bus bus);
 
-    List<BigInteger> collectIdsByAnyBus(Collection<Bus> busList);
+    List<BigInteger> collectIdsByAnyBus(Collection<Bus> buses);
 }

@@ -9,31 +9,32 @@ import java.util.Collection;
 import java.util.List;
 import org.joda.time.DateTime;
 
-public interface GenericTechnicalAssignmentProvider<I extends TechnicalAssignment> extends BSEntityProvider<I> {
+public interface GenericTechnicalAssignmentProvider<I extends TechnicalAssignment>
+        extends BSEntityProvider<I> {
 
     List<I> findByMechanic(Mechanic mechanic);
 
-    List<I> findByAnyMechanic(Collection<Mechanic> mechList);
+    List<I> findByAnyMechanic(Collection<Mechanic> mechanics);
 
-    List<I> findByBeginTimeRange(DateTime leftBT, boolean strictLeft,
-            DateTime rightBT, boolean strictRight);
+    List<I> findByBeginTimeRange(DateTime beginTimeLeft, boolean strictLeft,
+            DateTime beginTimeRight, boolean strictRight);
 
-    List<I> findByEndTimeRange(DateTime leftET, boolean strictLeft,
-            DateTime rightET, boolean strictRight);
+    List<I> findByEndTimeRange(DateTime endTimeLeft, boolean strictLeft,
+            DateTime endTimeRight, boolean strictRight);
 
-    List<I> findByServiceCostRange(BigDecimal leftCost, boolean strictLeft,
-            BigDecimal rightCost, boolean strictRight);
+    List<I> findByServiceCostRange(BigDecimal serviceCostLeft, boolean strictLeft,
+            BigDecimal sericeCostRight, boolean strictRight);
 
     List<BigInteger> collectIdsByMechanic(Mechanic mechanic);
 
-    List<BigInteger> collectIdsByAnyMechanic(Collection<Mechanic> mechList);
+    List<BigInteger> collectIdsByAnyMechanic(Collection<Mechanic> mechanics);
 
-    List<BigInteger> collectIdsByBeginTimeRange(DateTime leftBT, boolean strictLeft,
-            DateTime rightBT, boolean strictRight);
+    List<BigInteger> collectIdsByBeginTimeRange(DateTime beginTimeLeft, boolean strictLeft,
+            DateTime beginTimeRight, boolean strictRight);
 
-    List<BigInteger> collectIdsByEndTimeRange(DateTime leftET, boolean strictLeft,
-            DateTime rightET, boolean strictRight);
+    List<BigInteger> collectIdsByEndTimeRange(DateTime endTimeLeft, boolean strictLeft,
+            DateTime endTimeRight, boolean strictRight);
 
-    List<BigInteger> collectIdsByServiceCostRange(BigDecimal leftCost, boolean strictLeft,
-            BigDecimal rightCost, boolean strictRight);
+    List<BigInteger> collectIdsByServiceCostRange(BigDecimal serviceCostLeft, boolean strictLeft,
+            BigDecimal sericeCostRight, boolean strictRight);
 }

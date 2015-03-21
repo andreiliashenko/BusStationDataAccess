@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface StationServiceProvider extends GenericTechnicalAssignmentProvider<StationService> {
 
-    List<StationService> findByDescriptionRegexp(String descrRegexp);
+    List<StationService> findByDescriptionRegexp(String descriptionRegexp);
 
-    List<BigInteger> collectIdsByDescriptionRegexp(String descrRegexp);
+    List<BigInteger> collectIdsByDescriptionRegexp(String descriptionRegexp);
 }

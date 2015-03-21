@@ -17,11 +17,11 @@ public interface RegionProvider extends BSEntityProvider<Region> {
 
     List<Region> findByCode(Integer code);
 
-    List<Region> findByAnyCode(Collection<Integer> codeList);
+    List<Region> findByAnyCode(Collection<Integer> codes);
 
     List<Region> findByStation(Station station);
 
-    List<Region> findByAnyStation(Collection<Station> stationList);
+    List<Region> findByAnyStation(Collection<Station> stations);
 
     List<BigInteger> collectIdsByName(String name);
 
@@ -29,9 +29,9 @@ public interface RegionProvider extends BSEntityProvider<Region> {
 
     List<BigInteger> collectIdsByCode(Integer code);
 
-    List<BigInteger> collectIdsByAnyCode(Collection<Integer> codeList);
+    List<BigInteger> collectIdsByAnyCode(Collection<Integer> codes);
 
     List<BigInteger> collectIdsByStation(Station station);
 
-    List<BigInteger> collectIdsByAnyStation(Collection<Station> stationList);
+    List<BigInteger> collectIdsByAnyStation(Collection<Station> stations);
 }

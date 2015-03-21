@@ -6,9 +6,9 @@ import java.util.List;
 
 public interface BusRefuellingProvider extends GenericBusServiceProvider<BusRefuelling> {
 
-    List<BusRefuelling> findByVolumeRange(Integer gasVolumeLeft, boolean leftStrict,
-            Integer gasVolumeRight, boolean rightStrict);
+    List<BusRefuelling> findByVolumeRange(Integer volumeLeft, boolean leftStrict,
+            Integer volumeRight, boolean rightStrict);
 
-    List<BigInteger> collectIdsByVolumeRange(Integer gasVolumeLeft, boolean leftStrict,
-            Integer gasVolumeRight, boolean rightStrict);
+    List<BigInteger> collectIdsByVolumeRange(Integer volumeLeft, boolean leftStrict,
+            Integer volumeRight, boolean rightStrict);
 }

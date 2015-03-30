@@ -7,9 +7,9 @@ import java.util.List;
 
 public interface BusRepairmentProvider extends GenericBusServiceProvider<BusRepairment> {
 
-    List<BusRepairment> findByExpendablesPriceRange(BigDecimal expendablesPriceLeft, boolean leftStrict,
-            BigDecimal expendablesPriceRight, boolean rightStrict);
+    List<BusRepairment> findByExpendablesPriceRange(BigDecimal expendablesPriceLeft, boolean strictLeft,
+            BigDecimal expendablesPriceRight, boolean strictRight);
 
-    List<BigInteger> collectIdsByExpendablesPriceRange(BigDecimal expendablesPriceLeft, boolean leftStrict,
-            BigDecimal expendablesPriceRight, boolean rightStrict);
+    List<BigInteger> collectIdsByExpendablesPriceRange(BigDecimal expendablesPriceLeft, boolean strictLeft,
+            BigDecimal expendablesPriceRight, boolean strictRight);
 }

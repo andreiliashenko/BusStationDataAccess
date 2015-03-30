@@ -14,19 +14,19 @@ public interface RidePointProvider extends BSEntityProvider<RidePoint> {
 
     List<RidePoint> findByAnyRoutePoint(Collection<RoutePoint> routePoints);
 
-    List<RidePoint> findByArrivalTimeRange(DateTime arrivalTimeLeft, boolean leftStrict,
-            DateTime arrivalTimeRight, boolean rightStrict);
+    List<RidePoint> findByArrivalTimeRange(DateTime arrivalTimeLeft, boolean strictLeft,
+            DateTime arrivalTimeRight, boolean strictRight);
 
-    List<RidePoint> findByDepartureTimeRange(DateTime departureTimeLeft, boolean leftStrict,
-            DateTime departureTimeRight, boolean rightStrict);
+    List<RidePoint> findByDepartureTimeRange(DateTime departureTimeLeft, boolean strictLeft,
+            DateTime departureTimeRight, boolean strictRight);
 
     List<BigInteger> collectIdsByRoutePoint(RoutePoint routePoint);
 
     List<BigInteger> collectIdsByAnyRoutePoint(Collection<RoutePoint> routePoints);
 
-    List<BigInteger> collectIdsByArrivalTimeRange(DateTime arrivalTimeLeft, boolean leftStrict,
-            DateTime arrivalTimeRight, boolean rightStrict);
+    List<BigInteger> collectIdsByArrivalTimeRange(DateTime arrivalTimeLeft, boolean strictLeft,
+            DateTime arrivalTimeRight, boolean strictRight);
 
-    List<BigInteger> collectIdsByDepartureTimeRange(DateTime departureTimeLeft, boolean leftStrict,
-            DateTime departureTimeRight, boolean rightStrict);
+    List<BigInteger> collectIdsByDepartureTimeRange(DateTime departureTimeLeft, boolean strictLeft,
+            DateTime departureTimeRight, boolean strictRight);
 }

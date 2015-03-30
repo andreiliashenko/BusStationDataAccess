@@ -23,7 +23,7 @@ public interface GenericTechnicalAssignmentProvider<I extends TechnicalAssignmen
             DateTime endTimeRight, boolean strictRight);
 
     List<I> findByServiceCostRange(BigDecimal serviceCostLeft, boolean strictLeft,
-            BigDecimal sericeCostRight, boolean strictRight);
+            BigDecimal serviceCostRight, boolean strictRight);
 
     List<BigInteger> collectIdsByMechanic(Mechanic mechanic);
 
@@ -36,5 +36,5 @@ public interface GenericTechnicalAssignmentProvider<I extends TechnicalAssignmen
             DateTime endTimeRight, boolean strictRight);
 
     List<BigInteger> collectIdsByServiceCostRange(BigDecimal serviceCostLeft, boolean strictLeft,
-            BigDecimal sericeCostRight, boolean strictRight);
+            BigDecimal serviceCostRight, boolean strictRight);
 }

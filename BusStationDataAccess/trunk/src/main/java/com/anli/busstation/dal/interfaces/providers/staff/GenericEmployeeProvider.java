@@ -13,8 +13,8 @@ public interface GenericEmployeeProvider<I extends Employee> extends BSEntityPro
 
     List<I> findByNameRegexp(String nameRegexp);
 
-    List<I> findBySalaryRange(BigDecimal salaryLeft, boolean leftStrict,
-            BigDecimal salaryRight, boolean rightStrict);
+    List<I> findBySalaryRange(BigDecimal salaryLeft, boolean strictLeft,
+            BigDecimal salaryRight, boolean strictRight);
 
     List<I> findByHiringDateRange(DateTime hiringDateLeft, boolean strictLeft,
             DateTime hiringDateRight, boolean strictRight);
@@ -23,8 +23,8 @@ public interface GenericEmployeeProvider<I extends Employee> extends BSEntityPro
 
     List<BigInteger> collectIdsByNameRegexp(String nameRegexp);
 
-    List<BigInteger> collectIdsBySalaryRange(BigDecimal salaryLeft, boolean leftStrict,
-            BigDecimal salaryRight, boolean rightStrict);
+    List<BigInteger> collectIdsBySalaryRange(BigDecimal salaryLeft, boolean strictLeft,
+            BigDecimal salaryRight, boolean strictRight);
 
     List<BigInteger> collectIdsByHiringDateRange(DateTime hiringDateLeft, boolean strictLeft,
             DateTime hiringDateRight, boolean strictRight);

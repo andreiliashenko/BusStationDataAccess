@@ -11,13 +11,13 @@ public interface MechanicSkillProvider extends BSEntityProvider<MechanicSkill> {
 
     List<MechanicSkill> findByNameRegexp(String nameRegexp);
 
-    List<MechanicSkill> findByMaxDiffLevelRange(Integer maxDiffLevelLeft, boolean leftStrict,
-            Integer maxDiffLevelRight, boolean rightStrict);
+    List<MechanicSkill> findByMaxDiffLevelRange(Integer maxDiffLevelLeft, boolean strictLeft,
+            Integer maxDiffLevelRight, boolean strictRight);
 
     List<BigInteger> collectIdsByName(String name);
 
     List<BigInteger> collectIdsByNameRegexp(String nameRegexp);
 
-    List<BigInteger> collectIdsByMaxDiffLevelRange(Integer maxDiffLevelLeft, boolean leftStrict,
-            Integer maxDiffLevelRight, boolean rightStrict);
+    List<BigInteger> collectIdsByMaxDiffLevelRange(Integer maxDiffLevelLeft, boolean strictLeft,
+            Integer maxDiffLevelRight, boolean strictRight);
 }
